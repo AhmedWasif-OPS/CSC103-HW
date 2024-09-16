@@ -15,10 +15,16 @@
 #include <iostream>
 using std::cin;
 using std::cout;
+using std::endl;
 
 int main()
 {
 	/* your answer goes here... */
+
+  for (int curr = 32; curr < 126; curr++)
+ {
+  cout << curr << " :: " << (char) curr << endl;
+ }
 	return 0;
 }
 

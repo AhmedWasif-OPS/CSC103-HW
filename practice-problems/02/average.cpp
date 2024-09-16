@@ -6,10 +6,26 @@
 #include <iostream>
 using std::cin;
 using std::cout;
+using std::endl;
+
+
 
 int main()
 {
 	/* your answer goes here... */
+ int currNum;
+ int count = 0;
+ double average = 0;
+
+ while (cin >> currNum)
+ {
+  average += currNum;
+  count += 1;
+ }
+
+ cout << (average/count) << endl;
+ cout << "count: " << count << endl;
+
 	return 0;
 }
 

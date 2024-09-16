@@ -1,6 +1,7 @@
 #include <iostream>
 using std::cin;
 using std::cout;
+using std::endl;
 
 int main()
 {
@@ -16,7 +17,15 @@ int main()
 	 * 3. What type of result do you get when adding or multiplying
 	 *    floating point values with integers? */
 
+	int x = 2.5;
+
+	cout << x << " -initial test." << endl;
+	cout << (2*x) << " -multiplying." << endl;
+	cout << (2+x) << " -adding." << endl;
+
 	return 0;
 }
 
 // vim:foldlevel=2
+
+//Floating Point numbers usually get cut off before the decimal. For example, 2.5, becomes 2. This isn't an issue if there is a 0 after the decimal. But it may create some problems if there are significant digits.

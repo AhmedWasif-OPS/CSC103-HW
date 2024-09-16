@@ -3,10 +3,22 @@
 #include <iostream>
 using std::cin;
 using std::cout;
+using std::endl;
 
 int main()
 {
 	/* your answer goes here... */
+
+	int sum = 0;
+	int recent;
+
+	while (cin >> recent)
+	{
+		sum += recent;
+	}
+
+	cout << "Sum is: " << sum << endl;
+
 	return 0;
 }
 

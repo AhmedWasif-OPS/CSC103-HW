@@ -1,6 +1,7 @@
 #include <iostream>
 using std::cin;
 using std::cout;
+using std::endl;
 
 int main()
 {
@@ -12,6 +13,13 @@ int main()
 	 * are stored in something like scientific notation -- there is a
 	 * fixed amount of space to write the exponent, and there is also
 	 * a fixed amount of space for the coefficient... */
+
+	double d = 0.0;
+	double e = 0.000000000000000000000000000001;
+	double f = 1;
+
+	cout << d+f << endl;
+	cout << e+f << endl;
 
 	return 0;
 }

@@ -8,10 +8,27 @@
 #include <iostream>
 using std::cin;
 using std::cout;
+using std::endl;
 
 int main()
 {
 	/* your answer goes here... */
+
+ int n;
+ int count = 0;
+
+ cout << "Enter value for n: " << endl;
+
+ cin >> n;
+
+ while (n%2 != 1)
+ {
+  n /= 2;
+  count++;
+ }
+
+ cout << "Largest power: " << count << endl;
+
 	return 0;
 }
 
