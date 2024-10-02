@@ -16,10 +16,27 @@ if (b) {
 	X;
 }
 
+//My Answer
+while (b == true)
+{
+ X;
+ break;
+}
+
+
 /* 2. */
 
 for (X; b; Y) {
 	Z;
+}
+
+//My Answer
+X;
+
+while (b)
+{
+ Z;
+ Y;
 }
 
 /* 3. */
@@ -28,12 +45,34 @@ do {
 	X;
 } while (b);
 
+
+//My Answer
+X;
+
+while (b)
+{
+ X;
+}
+
 /* 4. */
 
 if (b) {
 	X;
 } else {
 	Y;
+}
+
+//My Answer
+while (b)
+{
+ X;
+ break;
+}
+
+while (!b)
+{
+ Y;
+ break;
 }
 
 /* 5. */
@@ -44,6 +83,25 @@ if (b1) {
 	Y;
 } else if (b3) {
 	Z;
+}
+
+//My Answer
+while (b1)
+{
+ X;
+ break
+}
+
+while (b2)
+{
+ Y;
+ break
+}
+
+while (b3)
+{
+ Z;
+ break
 }
 
 // vim:foldlevel=2

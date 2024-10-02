@@ -6,13 +6,56 @@
  * then you would print "111" since 7 = 1*4 + 1*2 + 1. */
 
 #include <iostream>
+#include <math.h>
+
 using std::cin;
 using std::cout;
+using std::endl;
+
 
 int main()
 {
 	/* your answer goes here... */
-	return 0;
+
+ int b;
+ int n;
+ int hPower = 0;
+ int remainder = 0;
+
+ cout << "Enter a base: ";
+ cin >> b;
+
+ cout << "Enter an integer: ";
+ cin >> n;
+
+ remainder = n%b;
+ n -= remainder;
+
+ do
+ {
+  hPower += 1;
+ }
+ while (pow(b, hPower + 1) < n);
+
+ while (hPower > 0)
+ {
+
+  int i = 0;
+  int divisor = pow(b, hPower);
+
+  while (n - divisor >= 0)
+  {
+   i++;
+   n -= divisor;
+  }
+
+  cout << i;
+  hPower--;
+ }
+
+ cout << remainder << endl;
 }
+
+
 
 // vim:foldlevel=2

@@ -9,10 +9,34 @@
 #include <iostream>
 using std::cin;
 using std::cout;
+using std::endl;
 
 int main()
 {
 	/* your answer goes here... */
+
+ int n;
+ int sum = 0;
+ int oddsum = 0;
+
+ cout << "Enter a value for n: ";
+ cin >> n;
+
+ for (int i = 0; i <= n; i++)
+ {
+  sum += (i*i);
+
+  if (i%2 != 0)
+  {
+   oddsum += (i*i);
+  }
+
+ }
+
+ cout << "The sum is: " << sum << endl;
+ cout << "The odd sum is: " << oddsum << endl;
+
+
 	return 0;
 }
 
