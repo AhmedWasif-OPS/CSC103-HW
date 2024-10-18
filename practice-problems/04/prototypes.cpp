@@ -13,8 +13,36 @@
 
 /* your answer goes here... */
 
+/* If 2 functions require each other to be called, then you would need to use a prototype to make sure the program compiles*/
+
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+
+bool Foo(int n);
+bool Bar(int n);
+
+bool Foo(int n)
+{
+ if (n == 0) return true;
+
+ return Bar(n-1);
+}
+
+bool Bar(int n)
+{
+ if (n == 0) return true;
+
+ return Foo(n-1);
+}
+
+
 int main()
 {
+
+ cout << Foo(3) << endl;
+
 	return 0;
 }
 

@@ -18,11 +18,34 @@
 #include <iostream>
 using std::cin;
 using std::cout;
+using std::endl;
 
 int main()
 {
 	/* your answer goes here... */
-	return 0;
+ int n;
+ int steps = 0;
+
+ cout << "Enter an Integer: ";
+ cin >> n;
+
+ while (n != 1)
+ {
+  if (n%2 == 0)
+  {
+   n/=2;
+   steps++;
+  }
+  else
+  {
+   n = 3*n + 1;
+   steps++;
+  }
+ }
+
+ cout << "Number of Steps: " << steps << endl;
+
+ return 0;
 }
 
 // vim:foldlevel=2

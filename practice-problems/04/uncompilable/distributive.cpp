@@ -16,5 +16,18 @@ if (A) {
 	Z();
 }
 
+/* MY ANSWER:*/
+X();
+
+if (A)
+{
+	Y();
+}
+else
+{
+	W();
+}
+
+Z();
 
 // vim:foldlevel=2

@@ -26,5 +26,20 @@ if (A) {
  * See if you can generalize the result to an arbitrary number of conditions.
  * */
 
+/* MY ANSWER:
+
+X() will be dead code when not A
+Y() will be dead code when A and not B
+Z() will be dead code when A, B, and not C
+W() will be dead code when A, B, or C
+
+So when A: Y(), Z(), and W() are all dead code
+when B: X(), Z(), and W() are all dead code
+when C: X(), Y(), and W() are all dead code
+and when its not A, B, or C, then X(), Y(), and Z() are all dead code
+
+*/
+
+
 
 // vim:foldlevel=2
