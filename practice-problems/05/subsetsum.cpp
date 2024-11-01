@@ -11,13 +11,48 @@ using std::cin;
 using std::cout;
 #include <vector>
 using std::vector;
+using std::endl;
 
 /* your answer goes here... */
+bool SubSetSum(vector<int> V, int t, vector<int>& I, vector<int>& J)
+{
+ bool result = false;
+
+ for (size_t i = 0; i < V.size()-1; i++)
+ {
+  for (size_t j = i+1; j < V.size(); j++)
+  {
+   if (V[i]+V[j] == t)
+   {
+    result = true;
+    I.push_back(V[i]);
+    J.push_back(V[j]);
+   }
+  }
+ }
+
+ return result;
+}
+
 
 int main()
 {
 	/* TODO: call your function, make sure it works... */
-	return 0;
+ vector<int> test = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11};
+ vector<int> Ival;
+ vector<int> Jval;
+
+ int x = 12;
+
+ cout << "Found Sum?: " << SubSetSum(test, x, Ival, Jval) << endl;
+
+ for (size_t k = 0; k < Ival.size(); k++)
+ {
+  cout << Ival[k];
+  cout << ", " << Jval[k] << endl;
+ }
+
+ return 0;
 }
 
 // vim:foldlevel=2

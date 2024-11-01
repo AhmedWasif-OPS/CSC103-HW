@@ -9,16 +9,45 @@ using std::cin;
 using std::cout;
 #include <vector>
 using std::vector;
+using std::endl;
+
 
 /* your answer goes here: */
 void pop_front(vector<int>& V)
 {
+ vector<int> temp;
+
+ for (size_t i = 1; i < V.size(); i++)
+ {
+  temp.push_back(V[i]);
+ }
+
+ V = temp;
 }
 
 int main()
 {
 	/* TODO: call your function, make sure it works... */
-	return 0;
+
+ vector<int> test = {1, 2, 3, 4, 5, 6, 7};
+
+ cout << "Vector before Function: " << endl;
+
+ for (size_t j = 0; j < test.size(); j++)
+ {
+  cout << test[j] << endl;
+ }
+
+
+ cout << "Vector after Function: " << endl;
+ pop_front(test);
+
+ for (size_t j = 0; j < test.size(); j++)
+ {
+  cout << test[j] << endl;
+ }
+
+ return 0;
 }
 
 // vim:foldlevel=2

@@ -12,12 +12,47 @@ using std::cin;
 using std::cout;
 #include <vector>
 using std::vector;
+using std::endl;
 
 /* your answer goes here... */
+
+void Merge(vector<int> V1, vector<int> V2, vector<int>& V3)
+{
+ size_t i1 = 0, i2 = 0;
+
+ while(i1 < V1.size() && i2 < V2.size())
+ {
+  if (V1[i1] < V2[i2])
+  {
+   V3.push_back(V1[i1++]);
+  }
+  else if (V2[i2] < V1[i1])
+  {
+   V3.push_back(V2[i2++]);
+  }
+ }
+
+ while (i1 < V1.size()) V3.push_back(V1[i1++]);
+ while (i2 < V2.size()) V3.push_back(V2[i2++]);
+}
 
 int main()
 {
 	/* TODO: call your function, make sure it works... */
+ vector<int> V1 = {1, 3, 3, 5, 7, 9};
+ vector<int> V2 = {2, 4, 6, 8};
+
+ vector<int> result;
+
+ Merge(V1, V2, result);
+
+ cout << "Merged List Elements: " << endl;
+
+ for (size_t i = 0; i < result.size(); i++)
+ {
+  cout << result[i] << endl;
+ }
+
 	return 0;
 }
 

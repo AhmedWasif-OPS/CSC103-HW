@@ -26,12 +26,42 @@ using std::cin;
 using std::cout;
 #include <vector>
 using std::vector;
+using std::endl;
 
-size_t countdigits(size_t n);
+size_t countdigits(size_t n)
+{
+ size_t count = 1;
+
+ while (n/10 > 0)
+ {
+  n /= 10;
+  count++;
+ }
+
+ return count;
+}
 
 int main()
 {
-	return 0;
+
+ vector<int> Count(21, 0);
+ int x;
+
+
+ while (cin >> x)
+ {
+  Count[countdigits(x)]++;
+ }
+
+ for (size_t i = 1; i < Count.size(); i++)
+ {
+  cout << i << " : ";
+  cout << Count[i] << endl;
+ }
+
+ cout << endl;
+
+ return 0;
 }
 
 // vim:foldlevel=2

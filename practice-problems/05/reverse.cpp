@@ -8,12 +8,44 @@ using std::cin;
 using std::cout;
 #include <vector>
 using std::vector;
+using std::endl;
 
 /* your answer goes here... */
+
+void Reverse(vector<int>& V)
+{
+ vector<int> temp;
+
+ for (int i = V.size()-1; i >= 0; i--)
+ {
+  temp.push_back(V[i]);
+ }
+
+ V = temp;
+}
 
 int main()
 {
 	/* TODO: call your function, make sure it works... */
+
+ vector<int> test = {1, 2, 3, 4, 5};
+
+ cout << "Before Function: " << endl;
+
+ for (size_t j = 0; j < test.size(); j++)
+ {
+  cout << test[j] << endl;
+ }
+
+ cout << "After Function: " << endl;
+
+ Reverse(test);
+
+ for (size_t j = 0; j < test.size(); j++)
+ {
+  cout << test[j] << endl;
+ }
+
 	return 0;
 }
 
