@@ -26,13 +26,49 @@ using std::cout;
 using std::endl;
 #include <string>
 using std::string;
+using std::rand;
+using std::getline;
 
 /* your answer goes here... */
+
+void crazycase(string& value)
+{
+	for (int i = 0; i < value.length(); i++)
+	{
+		char& curr = value[i];
+		int randomizer = rand();
+
+		if (randomizer%2 == 0)
+		{
+			if ((int)curr > 90)
+			{
+				curr -= 32;
+			}
+			else if ((int)curr > 64)
+			{
+				curr += 32;
+			}
+			else if ((int)curr == 46)
+			{
+				curr = 33;
+			}
+		}
+	}
+}
+
 
 int main()
 {
 	/* TODO: call your function, make sure it works... */
-	return 0;
+	 string test;
+	 cout << "Enter String: ";
+	 getline(cin, test);
+
+	 crazycase(test);
+
+	 cout << test << endl;
+
+	 return 0;
 }
 
 // vim:foldlevel=2

@@ -19,6 +19,31 @@ using std::string;
 int main()
 {
 	/* TODO: call your function, make sure it works... */
+	char c;
+	int count = 0;
+	bool readwhite = true;
+
+	while (scanf("%c", &c) == 1)
+	{
+		if (readwhite)
+		{
+			if (c != ' ' || c != '\t' || c != '\n')
+			{
+				count++;
+				readwhite = false;
+			}
+		}
+		else
+		{
+			if (c == ' ' || c == '\t' || c == '\n')
+			{
+				readwhite = true;
+			}
+		}
+	}
+
+	cout << "Result: " << count << endl;
+
 	return 0;
 }
 

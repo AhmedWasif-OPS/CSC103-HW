@@ -11,9 +11,36 @@ using std::string;
 
 /* your answer goes here... */
 
+bool palindrome(string word)
+{
+	bool result = true;
+	int strlen = word.length();
+	int j = strlen - 1;
+
+	for (int i = 0; i < strlen/2; i++)
+	{
+		if (word[i] != word[j])
+		{
+			result = false;
+		}
+
+		j--;
+	}
+
+	return result;
+}
+
 int main()
 {
 	/* TODO: call your function, make sure it works... */
+
+	string word;
+
+	cout << "Enter Word: ";
+	cin >> word;
+
+	cout << palindrome(word) << endl;
+
 	return 0;
 }
 

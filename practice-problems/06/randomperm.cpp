@@ -18,12 +18,35 @@ using std::cout;
 using std::endl;
 #include <string>
 using std::string;
+using std::rand;
 
 /* your answer goes here... */
+
+void randomperm(string& n)
+{
+	for (int i = 0; i < n.length(); i++)
+	{
+		int randindex = rand() % (n.length());
+		char temp;
+
+		temp = n[randindex];
+		n[randindex] = n[i];
+		n[i] = temp;
+	}
+}
 
 int main()
 {
 	/* TODO: call your function, make sure it works... */
+	string input;
+
+	cout << "Enter String: ";
+	cin >> input;
+
+	randomperm(input);
+
+	cout << input << endl;
+
 	return 0;
 }
 

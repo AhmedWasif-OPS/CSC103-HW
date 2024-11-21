@@ -13,9 +13,44 @@ using std::string;
 
 /* your answer goes here... */
 
+void circular(string& base, int n)
+{
+	string saved;
+
+	for (int i = base.length(); i >= 0; i--)
+	{
+		if (i >= base.length() - n)
+		{
+			saved += base[i];
+		}
+		else
+		{
+			base[i+n] = base[i];
+		}
+	}
+
+	for (int i = 0; i < n; i++)
+	{
+		base[i] = saved[n-i];
+	}
+}
+
 int main()
 {
 	/* TODO: call your function, make sure it works... */
+	string input;
+	int n;
+
+	cout << "Enter a String: ";
+	cin >> input;
+
+	cout << "Enter an Int: ";
+	cin >> n;
+
+	circular(input, n);
+
+	cout << "Result: " << input << endl;
+
 	return 0;
 }
 
