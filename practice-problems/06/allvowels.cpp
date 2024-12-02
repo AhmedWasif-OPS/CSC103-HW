@@ -47,7 +47,7 @@ bool allvowels(string val)
 	{
 	 if (vowel == false)
 		{
-		 result = false;
+			result = false;
 		}
 	}
 
