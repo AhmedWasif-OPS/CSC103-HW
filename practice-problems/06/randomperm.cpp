@@ -19,11 +19,12 @@ using std::endl;
 #include <string>
 using std::string;
 using std::rand;
-
 /* your answer goes here... */
 
 void randomperm(string& n)
 {
+	srand(time(0));
+
 	for (int i = 0; i < n.length(); i++)
 	{
 		int randindex = rand() % (n.length());
