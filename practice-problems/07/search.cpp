@@ -10,7 +10,18 @@ using std::cin;
 bool search(node* L, int x)
 {
 	/* TODO: write me */
-	return false; /* just so it compiles... */
+	bool result = false;
+
+	for (node* i = L; i != NULL; i = i->next)
+	{
+		if (i->data == x)
+		{
+			result = true;
+		}
+	}
+
+
+	return result; /* just so it compiles... */
 }
 
 int main()

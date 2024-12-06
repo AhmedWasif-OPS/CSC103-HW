@@ -14,6 +14,14 @@ struct node {
 void clear(node*& L)
 {
 	/* TODO: write me */
+	node* x = L;
+
+	while (L != NULL)
+	{
+		x = L;
+		L = L->next;
+		delete x;
+	}
 }
 
 int main()

@@ -11,7 +11,27 @@ using std::cin;
 bool remove(node*& L, int x)
 {
 	/* TODO: write me */
-	return false; /* just so it compiles... */
+	bool result = false;
+
+	for (node* p = L; p != NULL; p = p->next)
+	{
+
+		if (L->data == x)
+		{
+			L = L->next;
+			result = true;
+		}
+
+		if (p->next != NULL && p->next->data == x)
+		{
+			node* nextNode = p->next;
+			p->next = nextNode->next;
+			result = true;
+		}
+
+	}
+
+	return result; /* just so it compiles... */
 }
 
 int main()

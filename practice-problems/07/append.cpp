@@ -8,18 +8,47 @@
 #include <iostream>
 using std::cout;
 using std::cin;
+using std::endl;
 #include "list-utils.h"
 
-node* append(node* L)
+node* append(node*& L, int x)
 {
 	/* TODO: write me */
-	return NULL; /* just so it compiles... */
+	node* curr = new node(x, NULL);
+	L->next = curr;
+
+	return curr;
 }
 
 int main()
 {
 	/* TODO: use your function to build a list from stdin by appending
 	 * over and over. */
+	int n;
+	node* start = NULL;
+	node* curr;
+
+	while (scanf("%d", &n))
+	{
+		if (start != NULL)
+		{
+			curr = append(curr, n);
+		}
+		else
+		{
+			start = new node(n, NULL);
+			curr = start;
+		}
+	}
+
+	cout << "{ ";
+
+	for (node* p = start; p != NULL; p = p->next)
+	{
+		cout << p->data << " ";
+	}
+
+	cout << "}" << endl;
 	return 0;
 }
 

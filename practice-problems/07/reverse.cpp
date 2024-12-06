@@ -10,7 +10,20 @@ using std::cin;
 
 void reverse(node*& L)
 {
-	/* TODO: write me */
+	/* TODO: write me */\
+	node* curr = L;
+	node* prevNode = NULL;
+	node* nextNode = NULL;
+
+	while (curr != NULL)
+	{
+		nextNode = curr->next;
+		curr->next = prevNode;
+		prevNode = curr;
+		curr = nextNode;
+	}
+
+	L = prevNode;
 }
 
 int main()
