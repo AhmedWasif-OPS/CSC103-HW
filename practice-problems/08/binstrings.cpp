@@ -20,9 +20,44 @@ using std::vector;
 #include <string>
 using std::string;
 
+
+void rBin(int n, string curr, vector<string>& result)
+{
+	if (n == 0)
+	{
+		result.push_back(curr);
+		return;
+	}
+
+	rBin(n-1, curr + "0", result);
+	rBin(n-1, curr + "1", result);
+}
+
+vector<string> binstring(int n)
+{
+	vector<string> result;
+	rBin(n, "", result);
+
+	return result;
+}
+
 int main()
 {
 	/* TODO: write some test code here */
+	int input;
+	vector<string> output;
+
+	cout << "Enter an Int: ";
+	cin >> input;
+
+	output = binstring(input);
+
+	for (string s : output)
+	{
+		cout << s << endl;
+	}
+
+
 	return 0;
 }
 
